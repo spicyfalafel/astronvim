@@ -26,10 +26,11 @@ return {
       ["<C-k>"] = false,
       ["gx"] = false,
       ["<leader>gh"] = false,
-      ["<leader>gp"] = false,
+      ["<leader>gp"] = {"<cmd>ToggleBlame<CR>", desc = "Toggle blame"},
 
       ["<leader>gk"] = false,
       ["<leader>gj"] = false,
+      ["<C-b>"] = false,
       ["<C-i>"] = false,
       ["<M-e>"] = false,
       ["<leader>x"] = { function() require("bufdelete").bufdelete(0, false) end, desc = "Close buffer" },
@@ -39,12 +40,13 @@ return {
       ["<leader>gn"] = { function() require("gitsigns").next_hunk() end, desc = "Next git hunk" },
       ["<leader>gr"] = { function() require("gitsigns").reset_hunk() end, desc = "Reset git hunk" },
 
-      -- ["<localleader>tt"] = { ":CcaNreplRunCurrentTest<CR>", desc = "Run current test" },
-      -- ["<localleader>tn"] = { ":CcaNreplRunTestsInTestNs<CR>", desc = "Run ns tests" },
-      -- ["<localleader>tT"] = { ":CcaNreplJumpToFailingCljTest<CR>", desc = "Go to failing test" },
-      ["<localleader>tg"] = {":CcaNsJumpToAlternate<CR>", desc = "go to test"},
+      ["<localleader>tt"] = { ":CcaNreplRunCurrentTest<CR>", desc = "Run current test" },
+      ["<localleader>tn"] = { ":CcaNreplRunTestsInTestNs<CR><CR>", desc = "Run ns tests" },
+      ["<localleader>tT"] = { ":CcaNreplJumpToFailingCljTest<CR><CR>", desc = "Go to failing test" },
+      -- ["<localleader>tT"] = { ":ConjureCljRunAlternateNsTests<CR>", desc = "Run tests of this non-test ns" },
+      -- ["<localleader>tg"] = {":CcaNsJumpToAlternate<CR>", desc = "go to test"},
 
-      ["<localleader>tt"] = { ":ConjureCljRunCurrentTest<CR>", desc = "Run current test" },
+      -- ["<localleader>tt"] = { ":ConjureCljRunCurrentTest<CR>", desc = "Run current test" },
       --
       ["<leader>uo"] = { ":TZAtaraxis<CR>", desc = "center" },
       ["<leader>uO"] = { ":TZMinimalist<CR>", desc = "center2" },
@@ -72,7 +74,8 @@ return {
       -- this is useful for naming menus
       ["<leader>b"] = { name = "Buffers" },
 
-      ["<leader>bb"] = { "<cmd>tabnew<cr>", desc = "New tab" },
+      ["<leader>bb"] = { "<cmd>Telescope projects<cr>", desc = "Select project" },
+      -- ["<leader>bb"] = { "<cmd>tabnew<cr>", desc = "New tab" },
       ["<leader>bc"] = { "<cmd>BufferLinePickClose<cr>", desc = "Pick to close" },
       ["<leader>bj"] = { "<cmd>BufferLinePick<cr>", desc = "Pick to jump" },
       ["<leader>bt"] = { "<cmd>BufferLineSortByTabs<cr>", desc = "Sort by tabs" },
@@ -115,9 +118,9 @@ return {
       ["("] = {"<Plug>(sexp_flow_to_prev_open)", desc = "hz1na"},
       ["<silent>ae"] = {"<Plug>(sexp_outer_element)", desc = "ae"},
       ["<silent>ie"] = {"<Plug>(sexp_inner_element)", desc = "ie"},
-      ["<localleader>ea"] = {"<cmd>CcaFormFlameResults", desc = "Open flamegraphs"},
-      ["<localleader>el"] = {"<cmd>CcaFormFlame", desc = "Make flamegraph"},
-      ["<localleader>ej"] = {"<cmd>CcaFormBench", desc = "Benchmark criterium"}
+      ["<localleader>ea"] = {"<cmd>CcaFormFlameResults<CR>", desc = "Open flamegraphs"},
+      ["<localleader>el"] = {"<cmd>CcaFormFlame<CR>", desc = "Make flamegraph"},
+      ["<localleader>ej"] = {"<cmd>CcaFormBench<CR>", desc = "Benchmark criterium"}
 
   },
   t = {

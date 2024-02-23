@@ -19,7 +19,9 @@ return {
 
   -- Set colorscheme to use
   -- colorscheme = "everforest", --light
-  colorscheme = "catppuccin", -- dark
+  -- colorscheme = "catppuccin", -- dark
+  colorscheme = "nano-theme",
+  -- colorscheme = "nordic",
   -- colorscheme = "oxocarbon", -- dark
 
   -- colorscheme = "nord", -- dark
@@ -60,15 +62,10 @@ return {
   },
 
   -- Configure require("lazy").setup() options
-  lazy = {
-    defaults = { lazy = true },
-    performance = {
-      rtp = {
-        -- customize default disabled vim plugins
-        disabled_plugins = { "tohtml", "gzip", "matchit", "zipPlugin", "netrwPlugin", "tarPlugin" },
-      },
-    },
-  },
+      lazy = function(opts)
+        opts.performance.rtp.disabled_plugins = nil
+        return opts
+      end,
 
   -- This function is run last and is a good place to configuring
   -- augroups/autocommands and custom filetypes also this just pure lua so

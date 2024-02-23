@@ -19,6 +19,14 @@ return {
   { import = "astrocommunity.colorscheme.nightfox-nvim" },
   { import = "astrocommunity.colorscheme.nord-nvim" },
   { import = "astrocommunity.colorscheme.oxocarbon-nvim" },
+  { import = "astrocommunity.colorscheme.nordic-nvim" },
 
   { import = "astrocommunity.code-runner.compiler-nvim" },
+  { import = "astrocommunity.lsp.lsp-signature-nvim" },
+  { import = "astrocommunity.lsp.lsp-inlayhints-nvim" },
+  { import = "astrocommunity.completion.cmp-cmdline" },
+  -- { import = "astrocommunity.completion.copilot-lua-cmp" },
+  -- { import = "astrocommunity.completion.codeium-vim" },
+  { import = "astrocommunity.project.project-nvim" },
+  { import = "astrocommunity.git.blame-nvim" },
 }
