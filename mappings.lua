@@ -6,7 +6,6 @@
 return {
   -- first key is the mode
   n = {
-
       ["<leader>e"] = false,
       ["<leader>E"] = {'<cmd>PGConnectBuffer<cr>', desc = "run pg query"},
       ["<leader>gT"] = {
@@ -80,6 +79,7 @@ return {
       ["<leader>bj"] = { "<cmd>BufferLinePick<cr>", desc = "Pick to jump" },
       ["<leader>bt"] = { "<cmd>BufferLineSortByTabs<cr>", desc = "Sort by tabs" },
       ["gd"] = {function() vim.lsp.buf.definition() end, desc = "go to definition my"},
+      ["<leader>gd"] = { "<cmd>DiffviewOpen<cr>", desc = "Git diff" },
       ["<Leader>ws"] = { "<C-W>s", desc = "Horizontal split" },
       ["<C-t>"] = { "<C-w>l", desc = "Go to right window" },
       ["<C-s>"] = { "<C-w>h", desc = "Go to left window" },

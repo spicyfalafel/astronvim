@@ -61,6 +61,7 @@ return {
     },
   },
 
+
   -- Configure require("lazy").setup() options
       lazy = function(opts)
         opts.performance.rtp.disabled_plugins = nil

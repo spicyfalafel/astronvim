@@ -8,9 +8,12 @@ return {
     signcolumn = "auto", -- sets vim.opt.signcolumn to auto
     wrap = false, -- sets vim.opt.wrap
     guifont = 'Iosevka:h12',
-    background="dark",
-    -- background="light",
-    linespace = 0
+    -- background="dark",
+    background="light",
+    linespace = 0,
+    cursorline = false,
+    foldcolumn = "0",
+    showtabline = 0,
 
   },
   -- o = {
